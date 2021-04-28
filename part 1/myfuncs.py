@@ -9,8 +9,7 @@ def isalnum(mot):
     for l in mot :
         if not (48<=ord(l)<=57 or 65<=ord(l)<=90 or 97<=ord(l)<=122):
             return False
-
-return True
+   return True
 
 
 # Baby practice :
