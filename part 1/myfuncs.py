@@ -1,17 +1,32 @@
 # py -m unittest
+
+
+# isalnum: prend une chaîne en argument et vérifie si elle
+# est alphanumérique
+
+# Best practice
 def isalnum(mot):
-#Trouver comment retourner juste chiffres et lettres :
     for l in mot :
-        if 48<=ord(l)<=57 :
-            pass
-            # print(f"{l} est un chiffre")
-        elif 65<=ord(l)<=90 or 97<=ord(l)<=122:
-            pass
-            # print(f"{l} est une lettre")
-        else :
+        if not (48<=ord(l)<=57 or 65<=ord(l)<=90 or 97<=ord(l)<=122):
             return False
 
-    return True
+return True
+
+
+# Baby practice :
+#def isalnum(mot):
+    #for l in mot :
+        # if 48<=ord(l)<=57 :
+        #     pass
+        #     # print(f"{l} est un chiffre")
+        # elif 65<=ord(l)<=90 or 97<=ord(l)<=122:
+        #     pass
+        #     # print(f"{l} est une lettre")
+        # else :
+        #     return False
+#return True
+
+    
 
 # print(isalnum("32coucou"))
 # print(isalnum("CouCo46819u"))
@@ -21,16 +36,10 @@ def isalnum(mot):
 
 
 
+#tolower : convertis une chaîne en minuscules
 
+# Best practice : 
 def tolower(mot):
-# """
-#     tolower : convertis une chaîne en minuscules
-#     Prend une chaîne en paramètre et retourne la même chaîne avec toutes les lettres majuscules converties en
-#     minuscules (sans changer le reste)
-#     Exemple : tolower("AbCd1234#") => "abcd1234#"
-# """
-
-
     result = ""
     for l in mot :
         if 65<=ord(l)<=90:
@@ -39,9 +48,9 @@ def tolower(mot):
             result += chr(lettre_valeur)
         else : 
             result += l
-    return(result)
+    return result
 
 
-# print(tolower("EMILIE2000"))
+# print(tolower("EMILIE2000#"))
 # print(tolower("YouPiLaVie"))
 # print(tolower("teST2...laMueRte!"))
