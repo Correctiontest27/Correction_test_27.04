@@ -25,15 +25,6 @@ def isalnum(mot):
         #     return False
 #return True
 
-    
-
-# print(isalnum("32coucou"))
-# print(isalnum("CouCo46819u"))
-# print(isalnum("061498765432"))
-# print(isalnum("061498765_(/!,)"))
-
-
-
 
 #tolower : convertis une chaîne en minuscules
 
@@ -48,8 +39,3 @@ def tolower(mot):
         else : 
             result += l
     return result
-
-
-# print(tolower("EMILIE2000#"))
-# print(tolower("YouPiLaVie"))
-# print(tolower("teST2...laMueRte!"))
