@@ -1,4 +1,4 @@
-def digits(numb):
+def multiply_digit(numb):
     x = ''
     y = 1
     if numb != 0:
