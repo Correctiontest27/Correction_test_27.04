@@ -18,3 +18,16 @@ def valid_password(mdp):
             return False
     else:
         return False
+
+# oneliner (un peu long mais découpé en blocs simples), considéré comme lisible en milieu pro
+# on utilise des \ pour passer à la ligne (mais que Python recolle tous les morceaux en une seule ligne)
+# avantages : lisible, modulable, debuggable, utilise uniquement des fonctions "basiques"
+# 
+# contrairement à l'implémentation qu'a proposé Sêlêm : je considère que tout caractère autre que chiffre ou lettre est un "caractère spécial"
+# pas une bonne idée en pratique (il existe des caractères "non imprimables" qu'on n'a pas envie de retrouver dans sa base de données de mots de passe)
+
+# #def valid_password(mdp):
+#    return len(mdp)>7 \
+#        and any(map(str.isalpha, mdp)) \
+#        and any(map(str.isdigit, mdp))\
+#        and any(map(lambda c: not(c.isalnum()),mdp))
