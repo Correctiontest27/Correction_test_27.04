@@ -42,9 +42,11 @@ def three_words(y):
     return True if res != 0 else False
 
 
+#encore une astuce différente pour faire mes tests
 _MODE_ALTERNATIF=False
 if _MODE_ALTERNATIF:
     # oneliner un peu tordu qui utile tous les builtin possibles
     def three_words(s):
-        return any(all(x) for x in zip(s,s[1:],s[2:]))
+        t=s.split()
+        return any(all(map(str.isalpha,x)) for x in zip(t,t[1:],t[2:])) and len(t)>2
 
