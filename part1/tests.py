@@ -28,6 +28,8 @@ class BasicTestSuite(unittest.TestCase):
         self.assertEqual(strcmp("g", "tabc"), -1)
         self.assertEqual(strcmp("abc", "abc"), 0)
         self.assertEqual(strcmp("abcd", "abc"), 1)
+	
+        self.assertEqual(strcmp("azc","abcd"),1)
 
 
 if __name__ == '__main__':
